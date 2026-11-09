@@ -40,13 +40,13 @@ class TestStatisticsService(unittest.TestCase):
         self.assertTrue(kurri_found)
 
     def test_gretzky_ei_loydy_det(self):
-            players = self.stats.team("DET")
-            gretzky_found = False
-            for player in players:
-                if player.name == "Gretzky":
-                    gretzky_found = True
-                    
-            self.assertFalse(gretzky_found)
+        players = self.stats.team("DET")
+        gretzky_found = False
+        for player in players:
+            if player.name == "Gretzky":
+                gretzky_found = True
+                
+        self.assertFalse(gretzky_found)
 
     def test_top_palauttaa_parhaan_ekana(self):
         top_players = self.stats.top(0)
