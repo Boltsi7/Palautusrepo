@@ -1,11 +1,5 @@
-from player_reader import PlayerReader
-
-
-
 class StatisticsService:
-    def __init__(self):
-        reader = PlayerReader()
-
+    def __init__(self, reader):
         self._players = reader.get_players()
 
     def search(self, name):
@@ -24,7 +18,6 @@ class StatisticsService:
         return list(players_of_team)
 
     def top(self, how_many):
-        # metodin käyttämä apufufunktio voidaan määritellä näin
         def sort_by_points(player):
             return player.points
 
